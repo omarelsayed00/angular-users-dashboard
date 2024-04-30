@@ -1,0 +1,24 @@
+<app-header (searchById)="searchById($event)"></app-header>
+<div class="users-list">
+  <div
+    *ngFor="let user of filteredUsers"
+    class="user-card"
+    (click)="navigateToUserDetails(user.id)"
+  >
+    <img [src]="user.avatar" alt="User Avatar" />
+    <div class="user-info">
+      <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+      <p>ID: {{ user.id }}</p>
+    </div>
+  </div>
+</div>
+<div class="pagination">
+  <button
+    class="page-btn"
+    *ngFor="let page of getPages()"
+    (click)="changePage(page)"
+  >
+    {{ page }}
+  </button>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,37 @@
+.user-details {
+  padding: 20px;
+}
+
+.user-details img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+
+.back-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-info {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.user-field {
+  margin-bottom: 10px;
+}
+
+.user-field label {
+  font-weight: bold;
+}
+
+.user-field span {
+  margin-left: 10px;
+}

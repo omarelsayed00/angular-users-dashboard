@@ -1,0 +1,52 @@
+.users-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-card {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+}
+
+.user-card img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user-info h3 {
+  margin: 5px 0;
+}
+
+.user-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.page-btn {
+  padding: 8px 16px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.page-btn:hover {
+  background-color: #f0f0f0;
+}

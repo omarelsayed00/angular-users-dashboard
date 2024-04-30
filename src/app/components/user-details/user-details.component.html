@@ -1,0 +1,23 @@
+<div class="user-details">
+  <button class="back-button" (click)="navigateBack()">Back</button>
+  <div *ngIf="user" class="user-info">
+    <h2>User Details</h2>
+    <img [src]="user.avatar" alt="User Avatar" />
+    <div class="user-field">
+      <label>ID:</label>
+      <span>{{ user.id }}</span>
+    </div>
+    <div class="user-field">
+      <label>First Name:</label>
+      <span>{{ user.first_name }}</span>
+    </div>
+    <div class="user-field">
+      <label>Last Name:</label>
+      <span>{{ user.last_name }}</span>
+    </div>
+    <div class="user-field">
+      <label>Email:</label>
+      <span>{{ user.email }}</span>
+    </div>
+  </div>
+</div>
