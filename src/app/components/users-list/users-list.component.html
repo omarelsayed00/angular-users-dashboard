@@ -1,5 +1,5 @@
 <app-header (searchById)="searchById($event)"></app-header>
-<div class="users-list">
+<div class="users-list" [@userCardsAnimation]="users.length">
   <div
     *ngFor="let user of filteredUsers"
     class="user-card"

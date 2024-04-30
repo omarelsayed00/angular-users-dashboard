@@ -9,6 +9,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router'; // Import RouterModule
 import { AppRoutingModule } from './app-routing.module';
 import { CacheInterceptor } from './interceptors/cache.interceptor';
+import { LoadingComponent } from './components/loading/loading.component';
+import { LoadingInterceptor } from './interceptors/loading-interceptor';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { CacheInterceptor } from './interceptors/cache.interceptor';
     HeaderComponent,
     UsersListComponent,
     UserDetailsComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { CacheInterceptor } from './interceptors/cache.interceptor';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })

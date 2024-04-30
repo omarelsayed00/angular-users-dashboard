@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user.interface';
 import { Router } from '@angular/router';
+import { userCardsAnimation } from '../../animations/app.animations';
 
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
   styleUrls: ['./users-list.component.css'],
+  animations: [userCardsAnimation],
 })
 export class UsersListComponent implements OnInit {
   users: User[] = [];
